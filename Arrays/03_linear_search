@@ -1,0 +1,51 @@
+// Code by Soham Belokar
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    /*
+        linear search in array
+        search for a given target element in the array and get its position
+        print the index of its first occurence
+        if not found print -1 // why -1? -> because minium array index is 0
+                                                hence -1 is invalid index
+                        0 1 2 3 4 5 6 7
+        n size array // 7 5 2 3 5 2 7 9
+        target element // 5
+        ans => 1    
+    */
+
+   // input
+	int size;
+	cin >> size;
+	int arr[size];
+	for(int i=0;i<size;i++){
+		cin >> arr[i];
+	}
+
+	// target input
+	int target;
+	cin >> target;
+
+	// index variable for answer, initialize using -1 // worst case
+	// int index = -1;
+
+	// flag is a boolean variable 
+	bool found = false;
+
+	// how to find the target element ?
+	// traversal
+	for(int i=0;i<size;i++){
+		if(arr[i] == target){
+			found = true;
+			cout << i << endl;
+			// index = i;// store the answer
+			break; // break from the loop
+		}
+	}
+	if(found == false){
+		cout << -1 << endl;
+	}
+    
+}
