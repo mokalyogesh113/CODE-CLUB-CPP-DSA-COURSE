@@ -1,4 +1,5 @@
 /.vscode
 *.exe
 temp.*
-*/.cph
+*/.cph/
+.cph/
